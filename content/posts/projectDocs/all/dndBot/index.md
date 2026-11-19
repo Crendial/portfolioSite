@@ -3,7 +3,7 @@ Title: DnD Discord bot docs
 date: 2026-11-18
 subject: Docs
 topic: All 
-weight: 1
+weight: 10
 tags:
   - Docs
   - DnD Discord bot
@@ -20,7 +20,7 @@ Summary: Discord bot documentation
 ## Usage:
 As long as someone in the Discord server you're in is hosting it (see deploying and modifying section), you'll have access to the following slash commands:
 
-![Screenshot of available Discord commands](images/dndBot/botCommands.png)
+![Screenshot of available Discord commands](botCommands.png)
 
 ### What do they do?:
 
@@ -32,30 +32,30 @@ The names are pretty self-explanatory. Each command rolls its respective die, re
 
 **D6:**
 
-![Image of a 2 dimensional D6 rendered with Pillow, rolled a 3](/botD6.png)
+![Image of a 2 dimensional D6 rendered with Pillow, rolled a 3](botD6.png)
 
 **D8:**
 
-![Image of a 2 dimensional D8 rendered with Pillow, rolled a 6](images/dndBot/botD8.png)
+![Image of a 2 dimensional D8 rendered with Pillow, rolled a 6](botD8.png)
 
 **D10:**
 
-![Image of a 2 dimensional D10 rendered with Pillow, rolled a 9](images/dndBot/botD10.png)
+![Image of a 2 dimensional D10 rendered with Pillow, rolled a 9](botD10.png)
 
 **D12:**
 
-![Image of a 2 dimensional D12 rendered with Pillow, rolled a 6](images/dndBot/botD12.png)
+![Image of a 2 dimensional D12 rendered with Pillow, rolled a 6](botD12.png)
 
 **D20:**
 
-![Image of a 2 dimensional D20 rendered with Pillow, rolled a 15](images/dndBot/botD20.png)
+![Image of a 2 dimensional D20 rendered with Pillow, rolled a 15](botD20.png)
 
 ### The outlier: Multiroll
 Multiroll rolls multiple of the given die. The image is a collage of all rolls and the total of the rolls is in the message text. You may think that rolling multiple dice would start struggling with efficiency issues, however each die tile is cached and can be reused during the bot's activity.
 To show what multiroll looks like in practice, we'll roll 4 D20s:
 
-![Screenshot of a user inputting multiroll with 4 D20s](images/dndBot/multirollSlashCommand.png)
-![The resulting rolls: 15, 20, 1, 13](images/dndBot/multirollResult.png)
+![Screenshot of a user inputting multiroll with 4 D20s](multirollSlashCommand.png)
+![The resulting rolls: 15, 20, 1, 13](multirollResult.png)
 
 Nice! We rolled both a nat20 (max roll) and a nat1 (minimum roll)! This is a perfect display of the max and low roll color changes! Pretty neat, right?
 
@@ -135,6 +135,8 @@ To stop it, press Ctrl+C or close the console.
 ### Modifying:
 You can obviously do anything you want with the code, but I made changing a few things a lot easier for you, mainly how the dice look:
 
-![Screenshot of commented variables in the code](images/dndBot/botCode.png)
+![Screenshot of commented variables in the code](botCode.png)
 
 Since the images are rendered on the fly, modifying how they end up is easy! I commented and explained all the modifiable variables as well as die color blocks. Simply edit bot.py, change the numbers around and see what happens! (I am not responsible for any changes breaking stuff ok?)
+
+[Github link](https://github.com/Crendial/dndBot)

@@ -4,6 +4,7 @@ icon: code
 title: Featured Projecs
 items:
   - title: Django exam and polling apps
+    post: posts/projectDocs/all/djangoPollExam
     role: Creator and maintainer
     description: An extended version of the official Django tutorial with 2 separate applications with their own use cases.
     tech:
@@ -19,6 +20,7 @@ items:
         icon: github
     
   - title: DnD Discord bot
+    post: posts/projectDocs/all/dndBot
     role: Creator and maintainer
     description: A Discord bot for my DnD group with dice rolling utilities.
     tech:

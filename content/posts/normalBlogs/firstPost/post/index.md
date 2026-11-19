@@ -3,7 +3,7 @@ title: My first post
 date: 2026-11-19
 subject: Normal post
 topic: All
-weight: 2
+weight: 10
 tags:
   - Hugo
   - Learning
