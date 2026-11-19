@@ -20,7 +20,7 @@ items:
     
   - title: DnD Discord bot
     role: Creator and maintainer
-    Description: A Discord bot for my DnD group with dice rolling utilities.
+    description: A Discord bot for my DnD group with dice rolling utilities.
     tech:
       - Python
       - Pillow
