@@ -49,5 +49,5 @@ items:
         url: https://github.com/Crendial/portfolioSite
         icon: github
       - label: Demo?
-        url: ...
+        url: https://portfoliosite.crendial.workers.dev
         icon: code
