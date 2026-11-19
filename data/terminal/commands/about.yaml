@@ -1,0 +1,12 @@
+name: about
+label: About
+description: Information about me
+quick: true
+weight: 10 
+greeting: Wassup
+person_name: "Crendial"
+summary: Aspiring streamer and studying programmer/software developer.
+details:
+  - I was always interested in computers, games and software since I was a child.
+    Hours upon hours spent on Youtube developed my interests and strengthened my love and interest how it actually works.
+    This also started my drive to entertain through streaming.

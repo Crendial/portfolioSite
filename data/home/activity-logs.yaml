@@ -1,0 +1,8 @@
+id: activity-logs
+type: activity
+icon: clock
+title: Activity Log
+activityLimit: 20
+lookbackDays: 15
+includePosts: true
+postSection: posts

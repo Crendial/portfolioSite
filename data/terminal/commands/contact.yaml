@@ -1,0 +1,15 @@
+name: contact
+label: Contact
+description: How to reach me
+quick: true
+weight: 50
+intro: Need me for something?
+email: blizzard.aapo@gmail.com
+links:
+  - label: Github
+    text: https://github.com/Crendial
+    url: https://github.com/Crendial
+  - label: Discord
+    text: My Discord server
+    url: https://discord.com/invite/u7FXeEyBkj
+outro: Best chance is to reach me on Discord, appreciate it!

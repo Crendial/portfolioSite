@@ -1,0 +1,46 @@
+profile:
+  name: "Crendial"
+  title: Studying programmer
+  avatar: "Images/pfp.png"
+  description: Aspiring programmer and streamer, learning everyday.
+  status:
+    label: Status
+    value: Internshipping in Italy
+  links:
+    - icon: github
+      label: github.com/Crendial
+      url: https://github.com/Crendial
+    - icon: twitch
+      label: twitch.tv/Crendial
+      url: https://twitch.tv/crendial
+    - icon: youtube
+      label: youtube.com/@Crendial
+      url: https://youtube.com/@Crendial
+    - icon: mail
+      label: blizzard.aapo@gmail.com
+      url: mailto:blizzard.aapo@gmail.com
+
+sections:
+  - id: profile-stats
+    type: stats
+    title: Profile stats
+    items:
+      - label: Experience
+        value: 2 months (2.5 years of study)
+        accent: emerald
+      - label: Focus
+        value: Fullstack development
+        accent: cyan
+      - label: Debugging
+        value: All the time
+        accent: amber
+  - id: core-stack
+    type: tags
+    title: Core Stack
+    items:
+      - Linux (nixOS)
+      - Python
+      - Django
+      - Tailwind CSS 
+      - Bootstrap CSS
+      - Javascript

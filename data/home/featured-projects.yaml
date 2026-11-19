@@ -1,0 +1,34 @@
+id: featured-projects
+type: projects
+icon: code
+title: Featured Projecs
+items:
+  - title: Django exam and polling apps
+    role: Creator and maintainer
+    description: An extended version of the official Django tutorial with 2 separate applications with their own use cases.
+    tech:
+      - Python
+      - Django
+      - Tailwind CSS
+    accent: purple
+    type: Study
+    stars: 0
+    links:
+      - label: Code
+        url: https://github.com/Crendial/djangoTutorial
+        icon: github
+    
+  - title: DnD Discord bot
+    role: Creator and maintainer
+    Description: A Discord bot for my DnD group with dice rolling utilities.
+    tech:
+      - Python
+      - Pillow
+      - Py-cord
+    accent: cyan
+    type: personal
+    stars: 0
+    links:
+      - label: Code
+        url: https://github.com/Crendial/dndBot
+        icon: github
