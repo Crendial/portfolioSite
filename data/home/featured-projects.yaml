@@ -34,3 +34,20 @@ items:
       - label: Code
         url: https://github.com/Crendial/dndBot
         icon: github
+
+  - title: Portfolio site
+    post: posts/normalBlogs/all/firstPost
+    role: Creator and maintainer
+    description: ... Is there another?
+    tech:
+      - Hugo
+    accent: emerald
+    type: ???
+    stars: -1
+    links:
+      - label: Code
+        url: https://github.com/Crendial/portfolioSite
+        icon: github
+      - label: Demo?
+        url: ...
+        icon: code
