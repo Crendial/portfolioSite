@@ -6,8 +6,8 @@ profile:
   status:
     label: Status
     value: Internshipping in Italy
-    preference_label: Remaining
-    preference: 9 days (as of 19th of november)
+    preference_label: Ends on
+    preference: 28th of November
   links:
     - icon: github
       label: github.com/Crendial
