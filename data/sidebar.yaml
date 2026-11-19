@@ -1,11 +1,13 @@
 profile:
   name: "Crendial"
   title: Studying programmer
-  avatar: "Images/pfp.png"
+  avatar: "images/pfp.png"
   description: Aspiring programmer and streamer, learning everyday.
   status:
     label: Status
     value: Internshipping in Italy
+    preference_label: Remaining
+    preference: 9 days (as of 19th of november)
   links:
     - icon: github
       label: github.com/Crendial

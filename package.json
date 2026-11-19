@@ -17,5 +17,8 @@
   },
   "workspaces": [
     "packages/hugoautogen"
-  ]
+  ],
+  "allowScripts": {
+    "@parcel/watcher@2.6.0": true
+  }
 }

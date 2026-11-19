@@ -33,7 +33,6 @@ build:
     - source: '(postcss|tailwind)\.config\.(js|mjs|ts)'
       target: css
 module:
-  replacements: github.com/hugo-themes/nerdy -> ../..
   imports:
     - path: github.com/hugo-themes/nerdy
   mounts:
@@ -41,6 +40,16 @@ module:
       target: content
     - source: data
       target: data
+    - source: assets
+      target: assets
+    - source: static
+      target: static
+    - source: layouts
+      target: layouts
+    - source: i18n
+      target: i18n
+    - source: archetypes
+      target: archetypes
     - disableWatch: true
       source: hugo_stats.json
       target: assets/notwatching/hugo_stats.json
