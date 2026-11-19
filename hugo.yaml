@@ -1,3 +1,8 @@
+locale: en-us
+title: Crendial portfolio
+disableKinds:
+  - taxonomy
+  - term
 security:
   exec:
     allow:
@@ -7,20 +12,35 @@ security:
       - '^node$'
       - '^postcss$'
       - '^tailwindcss$'
-
+  node:
+    permissions:
+      allowRead:
+        - '.'
+        - '../node_modules'
+markup:
+  tableOfContents:
+    startLevel: 2
+    endLevel: 3
+  goldmark:
+    renderer:
+      unsafe: false
 build:
   buildStats:
     enable: true
   cachebusters:
     - source: 'assets/notwatching/hugo_stats\.json'
       target: css
-
+    - source: '(postcss|tailwind)\.config\.(js|mjs|ts)'
+      target: css
 module:
+  replacements: github.com/hugo-themes/nerdy -> ../..
   imports:
     - path: github.com/hugo-themes/nerdy
   mounts:
-    - source: assets
-      target: assets
+    - source: content
+      target: content
+    - source: data
+      target: data
     - disableWatch: true
       source: hugo_stats.json
       target: assets/notwatching/hugo_stats.json

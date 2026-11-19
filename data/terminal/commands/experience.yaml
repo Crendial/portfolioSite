@@ -4,4 +4,17 @@ description: Work history
 quick: true
 weight: 30
 roles:
-  - 
+  - title: Repair assistant and inventory clerk
+    company: Phonent Oy
+    period: 27th Jan 2025 - 21st Feb 2025
+    highlights:
+      - Upkeep of customer devices (mobile phones and personal computers).
+      - Small scale repairs like data transfers.
+      - Checking general functionality of devices.
+      - Sorting and keeping invnetory of newly stored phone cases and screen protectors.
+  - title: Intern
+    company: GoProject srl
+    period: 3rd nov 2026 - 27th nov 2026
+    Highlights:
+      - Studied new real world tools like Tailwind, Django and Hugo
+      - Created 2 projects in Python

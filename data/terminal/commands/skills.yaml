@@ -1,0 +1,25 @@
+name: skills
+label: Skills
+description: My technical stack
+quick: true
+weight: 20
+categories:
+  - key: core_languages
+    items:
+      - Javascript
+      - Python
+      - HTML/CSS
+      - Nix
+  - key: frontend
+    items:
+      - Tailwind CSS
+      - Bootstrap
+  - key: backend
+    items:
+      - Django
+  - key: devops_tools
+    items:
+      - Git
+      - Docker
+      - Linux / Bash / Fish
+      - Nix
