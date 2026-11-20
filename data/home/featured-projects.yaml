@@ -1,7 +1,7 @@
 id: featured-projects
 type: projects
 icon: code
-title: Featured Projecs
+title: Featured Projects
 items:
   - title: Django exam and polling apps
     post: posts/projectDocs/all/djangoPollExam
