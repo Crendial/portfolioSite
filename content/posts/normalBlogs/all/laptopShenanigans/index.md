@@ -13,9 +13,13 @@ summary: Borrowed a laptop for my exchange, it broke and I had to improvize!
 I wanted to be an exchange student for about a month. Problem being I'm studying programming and didn't have a laptop. The solution was obvious. The school surely has plenty of laptops, right? I was right, I mean it wasn't the best laptop ever but Lenovo Ideapads are known to be fine for sure. Got it a week or 2 before leaving (I do not remember) and thought everything would be fine.
 
 Everything was not fine, 2 ish weeks into the exchange the thing started crashing once every 2 days. Strange. All the errors point to the NVME drive. Probably just some temporary issue, if it gets worse I'll just get some tools and reseat it just in case!
+
 ...
+
 ...
+
 ...
+
 It was not a temporary issue, crashing became more consistent, signs pointed to a physical fault, constant dropping from the bus. Managed a week since staying still helped for the time being. But that didn't last much longer. Managed to make this very website and publish it before it all went to crap.
 Can't even boot for 3 minutes, have to improvize.
 
