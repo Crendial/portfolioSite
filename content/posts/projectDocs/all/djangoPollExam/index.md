@@ -10,26 +10,40 @@ tags:
   - Tailwind CSS
 summary: Django exam and polling app documentation
 ---
+
 # Polling app
-## This is an extended version of the polling app created in the official first Django app tutorial.
-### It features:
+
+## This is an extended version of the polling app created in the official first Django app tutorial
+
+### It features
+
 - Cleaner UI.
+
 - A simplistic way to avoid multiple votes per user.
+
 - Pie charts in the results to show vote spread.
+
 - QR code functionality for easy sharing.
+
 - Support for multiple questions per poll.
+
 - Responsive design using tailwind
 
-## Example use cases:
-### Case 1:
-You want to collect data through public polls, so you decide to deploy the polling app.
-First you'd go to {your site url}/admin to create new polls:
+## Example use cases
+
+### Case 1
+
+You want to collect data through public polls, so you decide to deploy the polling app. First you'd
+go to {your site url}/admin to create new polls:
+
 ![Picture showing poll creation UI](createPoll.png)
 
-Simply click the add button next to polls on the left. Give the poll a release date, questions and choices, then save!
-Do this for any polls you want to make and you'll have a full front page in no time! (Keep in mind that the front page has a poll limit of 6 and future polls aren't shown)
+Simply click the add button next to polls on the left. Give the poll a release date, questions and
+choices, then save! Do this for any polls you want to make and you'll have a full front page in no
+time! (Keep in mind that the front page has a poll limit of 6 and future polls aren't shown)
 
-### To users, it would look like so:
+### To users, it would look like so
+
 Front page:
 
 ![Image of the poll apps front page](pollIndex.png)
@@ -42,15 +56,19 @@ User votes on all available polling question and reaches the results page:
 
 ![Image of poll results view with pie charts](pollResults.png)
 
-The user then sees pie charts of the resulting polls and is allowed to return to the front page once more.
+The user then sees pie charts of the resulting polls and is allowed to return to the front page once
+more.
 
-### Case 2:
-You are holding a meeting or presentation, maybe teaching a class.
-You want to hold a quick poll for opinions on a certain topic or decision.
-You create a poll similarly to case 1 but instead of using the front page and advertising the website. You do this instead:
+### Case 2
 
-### After creating a poll:
-Go to the polls section of admin (not the add button this time), you see next to each poll there is a show QR code button.
+You are holding a meeting or presentation, maybe teaching a class. You want to hold a quick poll for
+opinions on a certain topic or decision. You create a poll similarly to case 1 but instead of using
+the front page and advertising the website. You do this instead:
+
+### After creating a poll
+
+Go to the polls section of admin (not the add button this time), you see next to each poll there is
+a show QR code button.
 
 ![Image of poll admin page with a show QR code button next to each poll](pollPreQR.png)
 
@@ -58,77 +76,108 @@ You click it and a QR code pop-up shows up that you can show to anyone in the ro
 
 ![Image of QR code pop-up](pollQR.png)
 
-The QR code redirects to the same view as the user in case 1 after choosing a poll of their choice the rest follows normally.
+The QR code redirects to the same view as the user in case 1 after choosing a poll of their choice
+the rest follows normally.
 
 # Exam app
-## What is it:
-The above showcased polling app used as the core.
-Key differences:
+
+## What is it
+
+The above showcased polling app used as the core. Key differences:
+
 - Exams instead of polls, the questions inside have a single correct answer.
 - Exams have deadlines. After the deadline the exam becomes unanswerable and inaccessible.
 - Admin page has better tools to view the data.
 
-## Example use cases:
-### Case 1:
-You're curious on what the knowledge level of the general public is in certain topics. Sure the polling app could be used for this but the feedback is worse and the data is barely collected in comparison. So you decide to deploy the exam app instead.
-In a similar fashion to the polling site, you go to {your site url}/admin to create some quick exams:
+## Example use cases
+
+### Case 1
+
+You're curious on what the knowledge level of the general public is in certain topics. Sure the
+polling app could be used for this but the feedback is worse and the data is barely collected in
+comparison. So you decide to deploy the exam app instead. In a similar fashion to the polling site,
+you go to {your site url}/admin to create some quick exams:
 
 ![Image showing exam creation UI](examCreate.png)
 
-Very similar to the poll creation UI showcased above, to access it, click the add button next to exam. The main difference here is the addition of correct answers and end dates. The end date determines when the exam cannot be accessed or answered anymore, by default it's 1 day after the opening of the creation form. Each multiple choice question has to have 1 correct answer, no more, no less. The front page limit of 6 applies here too. Though with additional filtering. Not only are future exams inaccessible, but also exams that are past their end date.
+Very similar to the poll creation UI showcased above, to access it, click the add button next to
+exam. The main difference here is the addition of correct answers and end dates. The end date
+determines when the exam cannot be accessed or answered anymore, by default it's 1 day after the
+opening of the creation form. Each multiple choice question has to have 1 correct answer, no more,
+no less. The front page limit of 6 applies here too. Though with additional filtering. Not only are
+future exams inaccessible, but also exams that are past their end date.
 
-### To users it would look like so:
+### To users it would look like so
+
 The front page:
 
 ![Image of exam site index page with 6 exams](examIndex.png)
 
-As we can see, remarkably similar, except the end_date is shown already. This matters so that if someone visits the page, they avoid being disappointed by the exam becoming unanswerable while they are doing it.
-User chooses an exam they want to attempt but they have not yet tried an exam, so they must identify with a username (must be unique):
+As we can see, remarkably similar, except the end_date is shown already. This matters so that if
+someone visits the page, they avoid being disappointed by the exam becoming unanswerable while they
+are doing it. User chooses an exam they want to attempt but they have not yet tried an exam, so they
+must identify with a username (must be unique):
 
 ![Image of identification page](examIdentify.png)
 
-This is the first completely unique part of the exam version of the app. In the polling app, your cookie is silently given to you with the polls you've answered attached. In the exam app it's tied to a student model which has a name (given in the identification page). This is so someones answers can be traced across multiple exams (for example in a school setting).
+This is the first completely unique part of the exam version of the app. In the polling app, your
+cookie is silently given to you with the polls you've answered attached. In the exam app it's tied
+to a student model which has a name (given in the identification page). This is so someones answers
+can be traced across multiple exams (for example in a school setting).
 
 After giving yourself a name, you're redirected to the exam you actually chose:
 
 ![Image of the detail/attempt view of an exam](examDetail.png)
 
-This page is practically identical to the one in the polling app, except for the fact that there is an end date visible. For the same reason as the index page having it.
-The user answers the questions to the best of their ability:
+This page is practically identical to the one in the polling app, except for the fact that there is
+an end date visible. For the same reason as the index page having it. The user answers the questions
+to the best of their ability:
 
 ![Image of the result view of an exam](examResults.png)
 
-Once again pie charts with the chosen answers appear, but this time the users score is displayed first so that they knew how well they did alongside the pie charts showing what they chose and if the specific answer was correct or not. Pretty neat, right?
+Once again pie charts with the chosen answers appear, but this time the users score is displayed
+first so that they knew how well they did alongside the pie charts showing what they chose and if
+the specific answer was correct or not. Pretty neat, right?
 
-### Back to the admin (you):
+### Back to the admin (you)
 
-Now we have had John Student not only register but answer an exam. What can you see?
-Well you may have noticed earlier but this app has an extra model to view, that being the attempt. I'll get into that later since we're doing exam first:
+Now we have had John Student not only register but answer an exam. What can you see? Well you may
+have noticed earlier but this app has an extra model to view, that being the attempt. I'll get into
+that later since we're doing exam first:
 
 ![Image of exam models admin view](examAdminExam.png)
 
-We can see the usual suspects, name of the exam and publishing date. Also a few checks (for front page filtering) like is the exam considered recent or is it past it's deadline.
-There is also the QR code view which I'll mention more of in use case 2 and the score view. The score view is what I want to highlight since that was not in the polling version of the app. Let's look at the scores for the IT exam we just had John Student take:
+We can see the usual suspects, name of the exam and publishing date. Also a few checks (for front
+page filtering) like is the exam considered recent or is it past it's deadline. There is also the QR
+code view which I'll mention more of in use case 2 and the score view. The score view is what I want
+to highlight since that was not in the polling version of the app. Let's look at the scores for the
+IT exam we just had John Student take:
 
 ![Image of John Students score](examScores.png)
 
-From here we can see everyone who has taken the specific exam, what score they got (both score and %) and when they took it.
-You can also see that the students name is a link. It goes to the linked attempt models admin page which we'll look at next:
+From here we can see everyone who has taken the specific exam, what score they got (both score and
+%) and when they took it. You can also see that the students name is a link. It goes to the linked
+attempt models admin page which we'll look at next:
 
 ![Image of John Students attempt of the IT exam](examAttempt.png)
 
-Here we can see some of the same info as before (name, score, link to exam) but the new thing here is the chart at the bottom. It shows what specific questions the student got right and which ones they got wrong. 
-That concludes basic overview of the exam side and use case 1.
+Here we can see some of the same info as before (name, score, link to exam) but the new thing here
+is the chart at the bottom. It shows what specific questions the student got right and which ones
+they got wrong. That concludes basic overview of the exam side and use case 1.
 
-### Case 2:
-You're a teacher and want to give your students a quick surprise quiz on recent material. You don't want to go print out anything or show the questions on the board as if we went back a few decades, so you use the exam app.
+### Case 2
 
-You create an exam similarly to case 1, maybe set the deadline shorter, you go to the admin view and click the show QR code button:
+You're a teacher and want to give your students a quick surprise quiz on recent material. You don't
+want to go print out anything or show the questions on the board as if we went back a few decades,
+so you use the exam app.
+
+You create an exam similarly to case 1, maybe set the deadline shorter, you go to the admin view and
+click the show QR code button:
 
 ![Image of exam QR code](examQR.png)
 
-You get a QR code you can share to the students that redirects directly to the exam and makes them identify if they haven't (refer to case 1).
-You get to see all the results and know what the students might need to study up on (refer to case 1 again).
-Neat!
+You get a QR code you can share to the students that redirects directly to the exam and makes them
+identify if they haven't (refer to case 1). You get to see all the results and know what the
+students might need to study up on (refer to case 1 again). Neat!
 
 [Github link](https://github.com/Crendial/djangoTutorial)
