@@ -16,13 +16,11 @@ Summary: Discord bot documentation
 ## Features
 
 - Rolls all the different kinds of dice my group uses and renders them with Pillow.
-
 - Able to roll multiple of the same dice at once using the multiroll command.
-
+- Rolls initiative for a fixed party, with character names and DEX modifiers kept in a local
+  `party.py`.
 - Different color die for low and maximum rolls.
-
 - Thoroughly commented and explained code.
-
 - Capable of sending quotes to a channel of your choice. (off by default)
 
 ## Usage
@@ -61,9 +59,9 @@ and sends the rendered image. Here is what they look like.
 
 ![Image of a 2 dimensional D20 rendered with Pillow, rolled a 15](botD20.png)
 
-### The outlier: Multiroll
+### Multiroll
 
-Multiroll rolls multiple of the given die.The image is a collage of all rolls and the total of the
+Multiroll rolls multiple of the given die. The image is a collage of all rolls and the total of the
 rolls is in the message text. You may think that rolling multiple dice would start struggling with
 efficiency issues, however each die tile is cached and can be reused during the bot's activity. To
 show what multiroll looks like in practice, we'll roll 4 D20s:
@@ -73,6 +71,18 @@ show what multiroll looks like in practice, we'll roll 4 D20s:
 
 Nice! We rolled both a nat20 (max roll) and a nat1 (minimum roll)! This is a perfect display of the
 max and low roll color changes! Pretty neat, right?
+
+### Initiative
+
+`/initiative` rolls one d20 for every character in your `party.py` and replies with a plain text
+list in turn order, for example:
+
+![Screenshot of example initiative rolls](initiativeResults.png)
+
+Each line is `character: total (+DEX)`, nat 20s and nat 1s show as `NAT20` and `NAT1` respectively
+instead of the total. Ordering is done based on the total (d20 + DEX), except a nat 20 always goes
+first and a nat 1 always goes last. Tied totals go to the higher DEX modifier and if they're still
+tied it's randomized. The order is only shown once and is not stored between commands.
 
 ## Deploying and modifying
 
@@ -84,17 +94,20 @@ You want to be the friend to host a fun little bot? It's pretty easy! Here is a 
    create an app with the name of your choice.
 
 2. Go to the **installation** section of your app, give it the **Guild Install installation context
-   method**. In default install settings guild install, give it the **application.commands** scope.
-   You also should grab the **installation link.**
+   method**. In default install settings under guild install, give it the **application.commands**
+   scope. You also should grab the **installation link.**
 
 3. In the bot section, give it the name of your choice and tick Public Bot on to make installation
    for you and your friends easy, though keep in mind to not share the link if this is on. Finally,
    grab the bot token. **DO NOT SHARE THIS WITH ANYONE, KEEP IT SAFE!**
 
-4. Use the installation link to invite the bot to the server(s) of your choice. The Discord side of
-   things is now out of the way, now the more technical stuff.
+4. Use the installation link to invite the bot to the server(s) of your choice.
 
-5. Install the bot in your preferred way 5a. Using Git (Requires git to be installed):
+The Discord side of things is now out of the way, now the more technical stuff:
+
+5. Install the bot in your preferred way:
+
+5a. Using Git (Requires git to be installed):
 
 ```console
 cd <directory of choice>
@@ -109,7 +122,7 @@ git clone https://github.com/Crendial/dndBot.git
 
 - Unzip the file, put its contents into the directory of your choice.
 
-1. Create your virtual environment (You need python version 3.10-3.14):
+6. Create your virtual environment (You need python version 3.10-3.14):
 
 - Create a venv (Debian/Ubuntu users may need to install python3-venv separately):
 
@@ -132,6 +145,7 @@ source <path-to-venv>/bin/activate.fish
 
 # Windows (PowerShell)
 <path-to-venv>\Scripts\Activate.ps1
+
 ```
 
 (If the command 'python' doesn't exist, try python3 or py instead. If both fail, Python may not be
@@ -145,7 +159,7 @@ pip install -r requirements.txt
 
 Keep the console you used to activate the venv in the background, you'll need it soon!
 
-1. Make a `.env`:
+7. Make a `.env`:
 
 This repo provides a `.env.example` with two values:
 
@@ -159,7 +173,11 @@ This repo provides a `.env.example` with two values:
   in: enable Developer Mode in Discord, then right-click the channel and choose Copy ID. If Yapper
   stays off, you can leave the placeholder as-is because the bot ignores it.
 
-1. You can run the bot!:
+- For `/initiative`, copy `party_example.py` to `party.py` and replace the placeholder names and
+  modifiers with your party's. `party.py` is gitignored, so your real values stay local; without it,
+  the bot uses the placeholders from `party_example.py`.
+
+8. You can run the bot!:
 
 - Simply open the console you have the venv activated in and run
 
@@ -173,6 +191,7 @@ Your console should print the following if everything worked:
 
 ```console
 <bot name>#<numbers> has successfully connected to the cord!
+
 ```
 
 To stop it, press Ctrl+C or close the console.
@@ -194,4 +213,4 @@ want quotes posted in. In that same section you can replace the placeholder `QUO
 own quotes, and change `MIN_TIME` / `MAX_TIME` (in seconds) to control how long the bot waits
 between quotes. The defaults are 5 seconds to 2 hours.
 
-[Github link](https://github.com/Crendial/dndBot)
+[Crendial/dndBot](https://github.com/Crendial/dndBot)
