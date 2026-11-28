@@ -5,9 +5,9 @@ profile:
   description: Aspiring programmer and streamer, learning everyday.
   status:
     label: Status
-    value: Internshipping in Italy
-    preference_label: Ends on
-    preference: 28th of November
+    value: Studying and streaming
+    preference_label: ends on
+    preference: Hopefully never
   links:
     - icon: github
       label: github.com/Crendial
